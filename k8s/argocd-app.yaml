@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: monitoring-yaml
+  name: monitoring
   namespace: argocd
 
 spec:
@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/bablu3k/monitoring-yaml-gitops.git
     targetRevision: HEAD
-    path: /
+    path: k8s
 
   destination:
     server: https://kubernetes.default.svc
